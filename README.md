@@ -8,53 +8,31 @@ If we look at the Query we can see two type of query, one which is grouping whic
 
 Parameter based query :-- 
 
-  <Hierarchies>
-    <Hierarchy>
-      <BaseEntity>
-        <!--SomeTable-->
-        <EntityID>Gcdc54da2-9df1-4cf7-b2e9-18a3cb523036</EntityID>
-      </BaseEntity>
-<Groupings>
-<Grouping Name="Some Name">
-          <Expression Name="Some Name">
-            <AttributeRef>
-              <!--Some Name-->
-              <AttributeID>G8908eaff-7455-4695-ab45-896d6e94329f</AttributeID>
-            </AttributeRef>
-          </Expression>
- </Grouping>
- <Grouping Name="Some Other Name">
-          <Expression Name="Some Other Name">
-            <AttributeRef>
-              <!--Some Other Name-->
-              <AttributeID>G02769611-5665-48f8-9ee1-898c261ea05f</AttributeID>
-            </AttributeRef>
-          </Expression>
-</Grouping>
-
+Grouping Name="Some Name"
+          Expression Name="Some Name"
+            AttributeRef
+              !--Some Name--
+              AttributeID	G8908eaff-7455-4695-ab45-896d6e94329f	AttributeID
+            AttributeRef
+          Expression
+Grouping
+ 
 Detail based query :-- 
 
-  <Hierarchies>
-    <Hierarchy>
-      <BaseEntity>
-        <!--Some Table-->
-        <EntityID>Gd6c95314-28e1-4b11-a96f-41620f487925</EntityID>
-      </BaseEntity>
-<Groupings>
-        <Grouping Name="Some Column">
-          <Expression Name="Some Column">
-            <EntityRef>
-              <!--Some Column-->
-              <EntityID>Gd6c95314-28e1-4b11-a96f-41620f487925</EntityID>
-            </EntityRef>
-          </Expression>
-          <Details>
-            <Expression Name="Some Column">
-              <AttributeRef>
-                <!--Some Column-->
-                <AttributeID>Gd872745a-2aac-41bd-8206-6f839523363f</AttributeID>
-              </AttributeRef>
-            </Expression>
+        Grouping Name="Some Column"
+          Expression Name="Some Column"
+            EntityRef
+              !--Some Column--
+              EntityID 	Gd6c95314-28e1-4b11-a96f-41620f487925	EntityID
+            EntityRef
+          Expression
+          Details
+            Expression Name="Some Column"
+              AttributeRef
+                --Some Column--
+                AttributeID	Gd872745a-2aac-41bd-8206-6f839523363f AttributeID
+              AttributeRef
+            Expression
 
 First thing was to get a repository created with all the entity and the corresponding Attribute ID. When we look at the SMDL its an xml file, if we write a program which can look at the SMDL XML content and identify all the attribute that woudl be handy while looking at the SMDL we can see 3 different data which we can extract which can help. 
 
