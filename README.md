@@ -7,7 +7,7 @@ https://docs.microsoft.com/en-us/openspecs/sql_data_portability/ms-smdl/266461ea
 If we look at the Query we can see two type of query, one which is grouping which are mostly the query behind the parameters and another where you will see Details which are for the Tablix in the reports. As an example we can see the following. 
 
 Parameter based query :-- 
-<SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder">
+
   <Hierarchies>
     <Hierarchy>
       <BaseEntity>
@@ -33,7 +33,7 @@ Parameter based query :--
 </Grouping>
 
 Detail based query :-- 
-<SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder">
+
   <Hierarchies>
     <Hierarchy>
       <BaseEntity>
@@ -63,6 +63,7 @@ b) DSV parsing where we can understand what was the original table name used in 
 c) What is the relationship between the tables we should use to relate in case a Detail data set uses more than one table. 
 
 I have created 3 solutions which takes the xml file as an input and then write them to 3 SQL Tables 
+
 a) Entity
 
 CREATE TABLE [dbo].[Entities](
